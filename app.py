@@ -1,10 +1,16 @@
 from __future__ import annotations
 
-import io
 import logging
+import sys
+from pathlib import Path
 from typing import List
 
 import streamlit as st
+
+# Ensure project root is on sys.path when executed from different working directories (e.g., Streamlit Cloud)
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:  # pragma: no cover - environment dependent
+    sys.path.append(str(PROJECT_ROOT))
 
 from src.config.settings import get_settings
 from src.data.prisma_client import ComplianceViolation, PrismaClient, SampleDataLoader
