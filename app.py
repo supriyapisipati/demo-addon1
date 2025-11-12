@@ -17,3 +17,4 @@ from src.ui.app import main  # noqa: E402  pylint: disable=wrong-import-position
 
 if __name__ == "__main__":
     main()
+
