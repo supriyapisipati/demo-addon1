@@ -1,0 +1,50 @@
+[
+  {
+    "id": "violation-001",
+    "resource_name": "prod-data-bucket",
+    "policy_name": "S3 bucket public access",
+    "policy_id": "policy-123",
+    "severity": "high",
+    "account": "123456789012",
+    "region": "us-east-1",
+    "standard": "CIS AWS Foundations 1.4",
+    "description": "S3 bucket is publicly readable",
+    "remediation": "Block public access on the bucket and update bucket policy",
+    "details": {
+      "bucketPublic": true,
+      "riskScore": 9.4
+    }
+  },
+  {
+    "id": "violation-002",
+    "resource_name": "dev-app-sg",
+    "policy_name": "Security group allows 0.0.0.0/0 on SSH",
+    "policy_id": "policy-456",
+    "severity": "high",
+    "account": "123456789012",
+    "region": "us-west-2",
+    "standard": "CIS AWS Foundations 4.1",
+    "description": "Security group exposes SSH to the internet",
+    "remediation": "Restrict ingress to trusted IP ranges",
+    "details": {
+      "cidr": "0.0.0.0/0",
+      "riskScore": 8.9
+    }
+  },
+  {
+    "id": "violation-003",
+    "resource_name": "prod-rds",
+    "policy_name": "RDS instance not encrypted",
+    "policy_id": "policy-789",
+    "severity": "medium",
+    "account": "123456789012",
+    "region": "us-east-2",
+    "standard": "CIS AWS Foundations 1.15",
+    "description": "RDS instance storage is not encrypted",
+    "remediation": "Enable encryption at rest for RDS",
+    "details": {
+      "encryption": false,
+      "riskScore": 7.1
+    }
+  }
+]

@@ -1,0 +1,9 @@
+git+https://github.com/PaloAltoNetworks/prismacloud-api-python.git
+streamlit
+reportlab
+requests
+python-dotenv
+pydantic
+pydantic-settings
+openai
+httpx
